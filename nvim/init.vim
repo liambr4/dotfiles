@@ -1,4 +1,7 @@
 set relativenumber
+set ignorecase
+set smartcase
+
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
