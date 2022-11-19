@@ -26,5 +26,4 @@ nnoremap <leader>ff <cmd> Telescope find_files <cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').find_files{ cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1] }<cr>
 set updatetime=50
 set noswapfile
-set tabstop=2
-
+set tabstop=4

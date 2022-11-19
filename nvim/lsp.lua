@@ -54,6 +54,8 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>d',"<cmd>Telescope diagnostics<cr>", bufopts) 
+  vim.keymap.set('n', '<space>e',"<cmd>lua vim.diagnostic.open_float()<cr>", bufopts)
+
 end
 
 require('lspconfig').tsserver.setup{ 
@@ -64,6 +66,9 @@ require('lspconfig').rust_analyzer.setup{
 		capabilities = capabilities,
 		on_attach = on_attach,
 }
+require('lspconfig').csharp_ls.setup{
+		capabilities = capabilities,
+		on_attach = on_attach,
+}
 require('lualine').setup()
 require('telescope').setup()
-
